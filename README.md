@@ -41,7 +41,6 @@ beautify = require 'js-beautify'
 nks      = require 'nks-json'
 
 gulp.task 'test-spark', ['default','clean'],  ->
-  nks = require './'
   gulp.src [
     '.../src/**/*.nisi.json'
     '.../src/**/*.nica.json'
