@@ -17,7 +17,7 @@ extract  = require 'gulp-riff-extractor'
 beautify = require 'js-beautify'
 nks      = require 'nks-json'
 
-gulp.task 'test-spark', ['default','clean'],  ->
+gulp.task 'deserialize', ['default','clean'],  ->
   gulp.src [".../Serum/**/*.nksf"]
      # extract NISI/NACA/PLID chunks
     .pipe extract
@@ -40,7 +40,7 @@ extract  = require 'gulp-riff-extractor'
 beautify = require 'js-beautify'
 nks      = require 'nks-json'
 
-gulp.task 'test-spark', ['default','clean'],  ->
+gulp.task 'serialize', ['default','clean'],  ->
   gulp.src [
     '.../src/**/*.nisi.json'
     '.../src/**/*.nica.json'
