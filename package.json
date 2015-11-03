@@ -1,6 +1,6 @@
 {
   "name": "nks-json",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Serializing and Deserializing between JSON and NKS preset chunk.",
   "main": "index.js",
   "scripts": {

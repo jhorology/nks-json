@@ -65,7 +65,7 @@ gulp.task 'test-spark', ['default','clean'],  ->
     .pipe extract
       form_type: 'NIKS'
       chunk_ids: ['NISI', 'NICA', 'PLID']
-      filename_template: "<%= basename %>_padding.<%= id.trim().toLowerCase() %>.orig"
+      filename_template: "<%= basename %>.<%= id.trim().toLowerCase() %>.orig"
     .pipe gulp.dest './test_out'
     .pipe data (file) ->
       # desrilize to json object
@@ -91,7 +91,7 @@ gulp.task 'test-miniv', ['default','clean'],  ->
     .pipe extract
       form_type: 'NIKS'
       chunk_ids: ['NISI', 'NICA', 'PLID']
-      filename_template: "<%= basename %>_padding.<%= id.trim().toLowerCase() %>.orig"
+      filename_template: "<%= basename %>.<%= id.trim().toLowerCase() %>.orig"
     .pipe gulp.dest './test_out'
     .pipe data (file) ->
       # desrilize to json object
@@ -118,7 +118,7 @@ gulp.task 'test-velvet', ['default','clean'],  ->
     .pipe extract
       form_type: 'NIKS'
       chunk_ids: ['NISI', 'NICA', 'PLID']
-      filename_template: "<%= basename %>_padding.<%= id.trim().toLowerCase() %>.orig"
+      filename_template: "<%= basename %>.<%= id.trim().toLowerCase() %>.orig"
     .pipe gulp.dest './test_out'
     .pipe data (file) ->
       # desrilize to json object
@@ -145,7 +145,7 @@ gulp.task 'test-serum', ['default','clean'],  ->
     .pipe extract
       form_type: 'NIKS'
       chunk_ids: ['NISI', 'NICA', 'PLID']
-      filename_template: "<%= basename %>_padding.<%= id.trim().toLowerCase() %>.orig"
+      filename_template: "<%= basename %>.<%= id.trim().toLowerCase() %>.orig"
     .pipe gulp.dest './test_out'
     .pipe data (file) ->
       # desrilize to json object
