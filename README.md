@@ -12,14 +12,14 @@ Serializing and Deserializing between JSON and NKS preset chunk.
 converting chunk to json file.
 ```coffeescript
 
-data    = require 'gulp-data'
-extract = require 'gulp-riff-extractor'
-beautify    = require 'js-beautify'
+data     = require 'gulp-data'
+extract  = require 'gulp-riff-extractor'
+beautify = require 'js-beautify'
+nks      = require 'nks-json'
 
 gulp.task 'test-spark', ['default','clean'],  ->
-  nks = require './'
   gulp.src [".../Serum/**/*.nksf"]
-     # extract NISI/NACA/PLID chunks and save to test_out folder.
+     # extract NISI/NACA/PLID chunks
     .pipe extract
       form_type: 'NIKS'
       chunk_ids: ['NISI', 'NICA', 'PLID']
@@ -35,9 +35,10 @@ gulp.task 'test-spark', ['default','clean'],  ->
 converting json to chunk file.
 ```coffeescript
 
-data    = require 'gulp-data'
-extract = require 'gulp-riff-extractor'
-beautify    = require 'js-beautify'
+data     = require 'gulp-data'
+extract  = require 'gulp-riff-extractor'
+beautify = require 'js-beautify'
+nks      = require 'nks-json'
 
 gulp.task 'test-spark', ['default','clean'],  ->
   nks = require './'
